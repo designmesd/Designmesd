@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Des contacts mesd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- إعدادات أساسية وتصميم الخلفية --- */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط مشابه جدا للصورة */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* الخلفية اللامعة مع عكس التدرج:
+               الجزء العلوي في الصورة كان أزرق سماوي والأسفل برتقالي.
+               هنا تم العكس، حيث يبدأ من الأسفل بتدرج برتقالي/وردي وينتهي في الأعلى بتدرج أزرق/بنفسجي لامع.
+            */
+            background: radial-gradient(circle at top, #0c1e3e, #4a4e8a, #d47b8e, #ff9a8b);
+            background-size: 150% 150%;
+            animation: gradient-animation 15s ease infinite;
+        }
 
+        /* --- حركة خلفية ديناميكية --- */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- الحاوية الرئيسية للعناصر --- */
+        .link-container {
+            width: 90%;
+            max-width: 400px; /* تحديد عرض أقصى للحفاظ على الشكل على الشاشات الكبيرة */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box; /* لضمان عدم تجاوز الحجم المحدد */
+        }
+
+        /* --- تصميم الشعار العلوي --- */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* توسيط العناصر */
+            width: 100%;
+            margin-bottom: 25px; /* المسافة بين الشعار والأزرار */
+        }
+
+        .profile-pic-wrapper {
+            position: relative;
+            flex-shrink: 0; /* لمنع الصورة من التقلص */
+        }
+
+        .profile-pic {
+            width: 100px; /* حجم الشعار */
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.3);
+        }
+
+        /* --- تصميم العنوان --- */
+        .title {
+            color: #ffffff; /* لون النص أبيض */
+            font-size: 24px; /* حجم الخط */
+            font-weight: bold; /* خط عريض */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            margin-right: 20px; /* مسافة بين الشعار والنص */
+        }
+
+        /* --- تصميم الأزرار (الروابط) --- */
+        .link-button {
+            background-color: #ffe0e0; /* لون الخلفية الوردي الفاتح الدقيق */
+            color: #1c1c1c; /* لون النص الأسود */
+            border: 2px solid #1c1c1c; /* حدود سوداء */
+            border-radius: 30px; /* حواف دائرية جداً */
+            padding: 12px 25px; /* المسافات الداخلية للحجم المناسب */
+            margin-bottom: 20px; /* المسافة الدقيقة بين الأزرار */
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* لتوزيع النص والأيقونة على الأطراف */
+            align-items: center;
+            text-decoration: none;
+            font-size: 18px; /* حجم الخط داخل الزر */
+            font-weight: 500;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25); /* الظل الخارجي */
+            transition: all 0.2s ease-in-out; /* تأثير انتقال سلس */
+        }
+        
+        .link-button:hover {
+            transform: translateY(-3px); /* تأثير الرفع عند مرور الماوس */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* ظل أكبر عند التمرير */
+            background-color: #fff0f0; /* تغيير طفيف في اللون */
+        }
+
+        /* --- تصميم الأيقونات داخل الأزرار --- */
+        .link-button i {
+            font-size: 26px; /* حجم الأيقونة */
+            color: #1c1c1c; /* لون الأيقونة أسود */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="link-container">
+        <div class="profile-header">
+            <div class="profile-pic-wrapper">
+                <img src="https://i.ibb.co/L5hKdbf/abstract-logo.png" alt="Logo" class="profile-pic">
+            </div>
+            <h1 class="title">Des contacts mesd :</h1>
+        </div>
+
+        <a href="https://discord.gg/fjhmb7CA" target="_blank" class="link-button">
+            <span>discorde</span>
+            <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://www.instagram.com/design_mesd?igsh=MThnN3g4M3pueGR6YQ==" target="_blank" class="link-button">
+            <span>Instagram</span>
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/share/1CkTHFt6Ca/" target="_blank" class="link-button">
+            <span>Facebook</span>
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://youtube.com/@designmesd?si=mAUwy2uPYLQPXqMG" target="_blank" class="link-button">
+            <span>YouTube</span>
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://tr.ee/O4W474LT1i" target="_blank" class="link-button">
+            <span>X (Twitter)</span>
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://t.me/designmesd" target="_blank" class="link-button">
+            <span>telegram</span>
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://www.tiktok.com/@design.mesd?_t=zs-8zog37fmu69&_r=1" target="_blank" class="link-button">
+            <span>tiktok</span>
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+
+</body>
+</html>
